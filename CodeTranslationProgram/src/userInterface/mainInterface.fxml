@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane fx:id="mainInterface" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.MainInterfaceController">
+   <children>
+      <ScrollPane prefHeight="500.0" prefWidth="530.0" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0">
+         <content>
+            <TextArea fx:id="pseudoCodeTxt" prefHeight="500.0" prefWidth="530.0">
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font></TextArea>
+         </content></ScrollPane>
+      <ScrollPane layoutX="480.0" layoutY="51.0" prefHeight="500.0" prefWidth="630.0" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+         <content>
+            <TextArea fx:id="codeTxt" editable="false" prefHeight="500.0" prefWidth="630.0">
+               <font>
+                  <Font name="Consolas" size="13.0" />
+               </font></TextArea>
+         </content></ScrollPane>
+      <Label layoutX="50.0" layoutY="41.0" text="Enter Pseudo-code below as main function:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+      <ComboBox fx:id="codeTypeCb" layoutX="587.0" layoutY="35.0" prefHeight="25.0" prefWidth="150.0" promptText="select language..." AnchorPane.leftAnchor="685.0" AnchorPane.topAnchor="25.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Java" />
+               <String fx:value="C" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label layoutX="494.0" layoutY="40.0" text="Translate to:" AnchorPane.leftAnchor="605.0" AnchorPane.topAnchor="30.0" />
+      <Button fx:id="instructionBtn" layoutX="277.0" layoutY="35.0" mnemonicParsing="false" onAction="#onInstructionBtnClick" prefHeight="25.0" prefWidth="130.0" text="Syntax Instruction" AnchorPane.rightAnchor="705.0" AnchorPane.topAnchor="25.0" />
+      <Button fx:id="translateBtn" layoutX="752.0" layoutY="16.0" mnemonicParsing="false" onAction="#onTranslateBtnClick" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: black;" text="Translate" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="historyBtn" layoutX="50.0" layoutY="661.0" mnemonicParsing="false" onAction="#onHistoryBtnClick" prefHeight="25.0" prefWidth="130.0" text="History Records..." AnchorPane.bottomAnchor="130.0" AnchorPane.rightAnchor="705.0" />
+      <Button fx:id="runBtn" disable="true" layoutX="855.0" layoutY="661.0" mnemonicParsing="false" onAction="#onRunCodeBtnClick" prefHeight="25.0" prefWidth="140.0" text="Run the Code" AnchorPane.bottomAnchor="130.0" AnchorPane.rightAnchor="55.0" />
+      <Button fx:id="copyBtn" layoutX="725.0" layoutY="660.0" mnemonicParsing="false" onAction="#onCopyBtnClick" prefHeight="25.0" prefWidth="140.0" text="Copy All" AnchorPane.bottomAnchor="130.0" AnchorPane.rightAnchor="200.0" />
+      <Label layoutX="50.0" layoutY="584.0" text="Program Information:" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="275.0" />
+      <Label fx:id="infoLabel" layoutX="50.0" layoutY="610.0" prefHeight="45.0" prefWidth="965.0" style="-fx-background-color: lightgray;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="275.0" />
+      <Label text="※ COMP390 From pseudo-code to code | Version 3.0.3" textFill="#a49b9b" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="474.0" layoutY="303.0" prefHeight="20.0" prefWidth="20.0" text="→" textAlignment="CENTER" AnchorPane.leftAnchor="565.0" AnchorPane.topAnchor="240.0" />
+      <Button fx:id="clearBtn" layoutX="117.0" layoutY="565.0" mnemonicParsing="false" onAction="#onClearBtnClick" prefHeight="25.0" prefWidth="130.0" text="Clear Area" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="275.0" />
+      <Button fx:id="addFunctionBtn" layoutX="166.0" layoutY="566.0" mnemonicParsing="false" onAction="#onAddFunctionBtnClick" prefHeight="25.0" prefWidth="180.0" text="+ Add Function..." AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="603.0" text="**You can add functions into current pseudo-code by click the (+) button." textFill="#a49b9b" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="20.0" />
+      <Button fx:id="helpRunBtn" layoutX="920.0" layoutY="566.0" mnemonicParsing="false" onAction="#onHelpRunBtnClick" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: lightgray;" text="(?)" AnchorPane.bottomAnchor="130.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="functionList" layoutX="20.0" layoutY="621.0" mnemonicParsing="false" onAction="#onFunctionListBtnClick" prefHeight="40.0" prefWidth="180.0" text="Current Function List..." AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" />
+      <CheckBox fx:id="intMode" layoutX="610.0" layoutY="570.0" mnemonicParsing="false" onAction="#onIntModeClick" text="Math Integer Mode" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="605.0" />
+   </children>
+</AnchorPane>

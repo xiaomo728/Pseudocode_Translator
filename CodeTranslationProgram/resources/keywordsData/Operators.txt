@@ -1,0 +1,43 @@
+PLUS,+
++,+
+MINUS,-
+-,-
+TIMES,*
+*,*
+DIVS,/
+/,/
+MOD,%
+%,%
+NOT EQUAL TO,!=
+!=,!=
+EQUAL TO,==
+==,==
+NOT BIGGER THAN,<=
+<=,<=
+BIGGER THAN,>
+>,>
+NOT SMALLER THAN,>=
+>=,>=
+SMALLER THAN,<
+<,<
+NOT BIGGER THAN OR EQUAL TO,<
+<,<
+BIGGER THAN OR EQUAL TO,>=
+>=,>=
+NOT SMALLER THAN OR EQUAL TO,>
+>,>
+SMALLER THAN OR EQUAL TO,<=
+<=,<=
+AND,&&
+OR,||
+NOT,!
+IS NEGATIVE,< 0
+IS NOT NEGATIVE,>= 0
+IS POSITIVE,> 0
+IS NOT POSITIVE,<= 0
+IS ZERO,== 0
+IS NOT ZERO,!= 0
+IS TRUE,== true
+IS NOT TRUE,!= true
+IS FALSE,== false
+IS NOT FALSE,!= false
